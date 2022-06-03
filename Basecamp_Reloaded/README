@@ -1,0 +1,111 @@
+No ex00 o objetivo é aprender a criar pastas, arquivos, mudar permissões,
+criar softlinks e hardlinks. Entender todos os campos do comando (ls -l).
+O objetivo é ter como resultado do comando (ls -l) no terminal shell, o seguinte:
+
+?> ls -l
+total XX
+drwx--xr-x 2 XX XX 4096 Jun  1  2021 test0
+-rwx--xr-- 1 XX XX    4 Jun  1  2021 test1
+dr-x---r-- 2 XX XX 4096 Jun  1  2021 test2
+-r-----r-- 2 XX XX    1 Jun  1  2021 test3
+-rw-r----x 1 XX XX    2 Jun  1  2021 test4
+-r-----r-- 2 XX XX    1 Jun  1  2021 test5
+lrwxrwxrwx 1 XX XX    5 Jun  1  2021 test6 -> test0
+?>
+
+Como resolvi?
+Para isso é usados os comandos
+mkdir - Para criar pastas
+touch - Para criar arquivos
+ln "target" "newdirectory" - para criar hardlink
+ln -s "target" "newdirectory" - para criar softlink
+touch -t AAAAMMDDHHMM "target"- Para mudar a data.
+touch -ht AAAAMMDDHHMM "target"- Adiciona o "h" para mudar data de softlink
+o 4º espaço se refere a quantidade de bytes do arquivo, e cada char representa
+1 byte.
+Para mudar as permissões:
+chmod XXX "target" - 
+As permissões são respectivamente de usuário, grupos e outros.
+Para setar as permissões r-4 w-2 x-1 X é a soma deles.
+Por fim o comando tar -cf exo.tar * para compactar tudo em arquivo .tar.
+(para descompactar troca o c pelo x)
+cf = compact file | xf = extract file
+
+No ex01
+Neste o objetivo é ter o seguinte resultado:
+?>cat z
+Z
+?>
+touch z
+echo Z >> z
+
+No ex02
+
+
+Nos ex05
+O objetivo é  criar um arquivo com nome: 
+"\?$*’MaRViN’*$?\"
+Para isso temm que colocar a barra de escape antes dos carractere:
+", \, $ e '.
+Fica assim a linha de comando.
+touch \"\\?\$*\'MaRViN\'*\$?\\\"
+
+ex06
+Função que imprime em uma linha o alphabeto.
+
+ex07
+Função que imprime em uma linha os algarismos.
+
+ex08
+Função que tem como parâmetro um número inteiro e retorna
+"P" se esse numero for positivo e "N" se esse número for negativo.
+
+ex09
+Função que coloca o número "42" em um ponteiro passado como parâmetro.
+
+ex10
+Função que troca o valor de dois ponteiros de inteiro passados como parâmetro.
+
+ex11
+Função cujos parâmetro a, b, e ponteoros div e mod.
+O resultado da divisão de a e b é colocado no endereço do ponteiro div e 
+O resultado do módulo no ponteiro mod.
+
+ex12
+Função que calcula o fotarial de um número dado. Em erros ela retorna um 0.
+O resultado devev ser dado em menos de 2s.
+
+ex13
+Função fatorial anterior porém recursiva.
+
+ex14
+Função que retorna o quadrado de um número se ele existe, se não retorna 0.
+Resultado deve ser dado em menos de 2s.
+
+ex15
+Função exibe uma string de caracteres
+
+ex16
+Função que reproduz o comportamento de strlen (man strlen).
+
+ex17
+Função que reproduz o comportamento de strcmp (man strcmp).
+
+ex18
+Função que exibe os argumentos que recebe.
+por ex.:
+
+$> ./a.out banana maçã uva
+banana
+maçã
+uva
+$>
+
+ex19
+Função que exibe os argumentos que recebe ordenados pela tabela ASCII
+
+ex20
+Função que reproduz o comportamento de strcmp strdup (man strdup).
+
+ex21
+(...)
